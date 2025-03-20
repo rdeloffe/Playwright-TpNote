@@ -1,0 +1,22 @@
+{
+  "name": "playwright-tpnote",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rdeloffe/Playwright-TpNote.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rdeloffe/Playwright-TpNote/issues"
+  },
+  "homepage": "https://github.com/rdeloffe/Playwright-TpNote#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.51.1",
+    "@types/node": "^22.13.10"
+  }
+}
