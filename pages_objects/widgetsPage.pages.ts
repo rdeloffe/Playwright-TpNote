@@ -38,10 +38,15 @@ export class WidgetsPage {
         await this.page.locator('#cars').selectOption('audi');
     }
 
+    
     async clickWidgetsHovers() {
-        await this.page.getByText('Widgets').click();
-        await this.page.getByText('Tool Tips').click();
+        await this.page.getByText('Widgets').click({ force: true });
+        //await this.page.getByText('Tool Tips').click();
+        await this.page.getByText('Tool Tips').click({ force: true });
+
     }
+
+    
 
     async Hovers() {
         await this.page.getByRole('button', { name: 'Hover me to see' }).hover();

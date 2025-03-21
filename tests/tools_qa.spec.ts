@@ -37,11 +37,9 @@ test('GotoWidgets + testWidgetsMenu + testWidgetHovers', async ({page}) => {
     const homepage = new HomePage(page);
     await homepage.Navigate();
     await homepage.goToElements();
-
     const elementswidgets = new WidgetsPage(page);
     await elementswidgets.clickWidgetsMenu();
     await elementswidgets.goodWidgetsMenu();
-
     await elementswidgets.clickWidgetsHovers();
     await elementswidgets.Hovers();
 });

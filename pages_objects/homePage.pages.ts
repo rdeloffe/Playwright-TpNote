@@ -10,7 +10,7 @@ constructor(page: Page) {
         await expect(this.page).toHaveURL('https://demoqa.com/');
         }
     async goToElements(){
-        await this.page.locator('div').filter({ hasText: /^Elements$/ }).nth(1).click();
+        await this.page.locator('svg').first().click();
         await expect(this.page).toHaveURL('https://demoqa.com/elements')
     }
 }
