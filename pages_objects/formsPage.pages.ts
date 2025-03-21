@@ -37,7 +37,10 @@ export class FormsPage {
         await this.page.locator('#dateOfBirthInput').fill('20 Jun 2002');
         await this.page.locator('#dateOfBirthInput').press('Escape');
 
+        await this.page.locator('#fixedban').evaluate((el) => el.remove()); // Remove ad if present
+        await this.page.locator('.subjects-auto-complete__value-container').scrollIntoViewIfNeeded();
         await this.page.locator('.subjects-auto-complete__value-container').click();
+
         await this.page.locator('#subjectsInput').fill('Jsp');
 
         await this.page.getByText('Sports').click();

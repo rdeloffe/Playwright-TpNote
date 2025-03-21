@@ -7,9 +7,16 @@ export class DynamicPropertiesPage {
         this.page = page;
     }
     async clickDynamicProperties() {
-        await this.page.getByRole('list').getByText('Dynamic Properties', { exact: true }).click();
+        const dynamicProperties = this.page.getByText('Dynamic Properties', { exact: true });
+    
+        // Attendre que l'élément soit activé et cliquable
+        await dynamicProperties.waitFor({ state: 'attached' });
+        await dynamicProperties.waitFor({ state: 'visible' });
+    
+        await dynamicProperties.click();
         await expect(this.page).toHaveURL('https://demoqa.com/dynamic-properties');
     }
+    
 
     async changeColors(){
         // Localiser le bouton "Color Change"

@@ -40,8 +40,6 @@ export class WidgetsPage {
 
     
     async clickWidgetsHovers() {
-        await this.page.getByText('Widgets').click({ force: true });
-        //await this.page.getByText('Tool Tips').click();
         await this.page.getByText('Tool Tips').click({ force: true });
 
     }

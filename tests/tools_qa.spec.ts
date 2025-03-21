@@ -7,6 +7,8 @@ import { RadioPage } from '../pages_objects/RadiosPage.pages';
 import { DynamicPropertiesPage } from '../pages_objects/dynamic_propertiesPage.pages';
 import { ProfilePage } from '../pages_objects/profilePage.pages';
 
+//npx playwright test tools_qa.spec.ts pour lancer le test 21/21 passed ;)
+
 test('Navigate + Elements' , async ({ page }) => {
     const homepage = new HomePage(page);
     await homepage.Navigate();
@@ -15,6 +17,7 @@ test('Navigate + Elements' , async ({ page }) => {
 
 test('GotoLinks + testLinks' , async ({ page }) => {
     const homepage = new HomePage(page);
+    await page.goto('https://demoqa.com/');
     await homepage.Navigate();
     await homepage.goToElements();
 
